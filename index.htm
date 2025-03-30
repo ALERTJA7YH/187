@@ -60,17 +60,22 @@
             opacity: 1;
         }
         .video-title {
-            font-size: 28px;
+            font-size: 20px;
             font-weight: bold;
-            margin: 20px 0 10px;
+            margin: 15px 0 5px;
             color: #FFD700;
             text-transform: uppercase;
         }
         video {
-            width: 80%;
-            max-width: 800px;
+            width: 150px;
+            height: auto;
             border-radius: 10px;
             border: 2px solid #4F3D9B;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        video:focus, video:active {
+            transform: scale(2);
         }
     </style>
 </head>
@@ -93,53 +98,34 @@
         <h1>WELCOME TO ALERTJA7YH Family</h1>
         <div id="list" class="list-content active-section">
             <pre>
-ASTFH2M ~ ' EYAD-ALSHAMRI '
-         -
-
-DRAGON ~ ' UNK '
-
-        -
-SPY ~ ' YASSIN '
-
-       -
-S0RTL2R ~ ' M7MD-AL3SERE ' 
-
-      -
-ScAiBeR ~ ' NASSER-ALDOSRE '
-
-      -
-MS600L ' UNKK '
-
-      -
-Ka2rezmA ' MOHNNAD '
-
-     -
-RE0 ' RYAN ' 
-
+ASTFH2M   ~   EYAD AL-SHAMRI
+DRAGON    ~   UNKNOWN
+SPY       ~   YASSIN
+S0RTL2R   ~   MOHAMMED AL-ASIRI
+ScAiBeR   ~   NASSER AL-DOSARI
+MS600L    ~   UNKNOWN
+Ka2rezmA  ~   MOHANNAD
+RE0       ~   RYAN
             </pre>
         </div>
         <div id="victims" class="video-container">
-            <div class="video-title">al3m</div>
+            <div class="video-title">Al3m</div>
             <video controls>
                 <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="video-title">CriminaL.</div>
             <video controls>
                 <source src="video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="video-title">Randar</div>
             <video controls>
                 <source src="ByPass3BRander.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
         <div id="waves" class="video-container">
             <div class="video-title">West</div>
             <video controls>
                 <source src="west1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
     </div>
@@ -149,13 +135,37 @@ RE0 ' RYAN '
                 el.classList.remove('active-section');
                 el.style.opacity = '0';
             });
-
             const section = document.getElementById(sectionId);
             section.classList.add('active-section');
             setTimeout(() => {
                 section.style.opacity = '1';
             }, 100);
         }
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+        if (location.protocol !== 'https:') {
+            location.replace('https://' + location.hostname + location.pathname + location.search);
+        }
+        document.addEventListener('keydown', function (event) {
+            if (event.keyCode === 123 ||
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73) ||
+                (event.ctrlKey && event.keyCode === 85)
+            ) {
+                event.preventDefault();
+                alert("⚠️ Access Denied!");
+            }
+        });
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            alert("⚠️ Right Click Disabled!");
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.shiftKey && event.keyCode === 74) {
+                event.preventDefault();
+                alert("⚠️ Access Denied!");
+            }
+        });
     </script>
 </body>
 </html>
