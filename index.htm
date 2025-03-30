@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,10 +29,11 @@
             width: 60px;
             border-radius: 10px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .menu-item:hover, .menu-item.active {
             background-color: #000000;
+            transform: scale(1.1);
         }
         .menu-item img {
             width: 30px;
@@ -46,44 +47,106 @@
             flex-grow: 1;
             padding: 20px;
         }
+        .video-container {
+            margin: 20px auto;
+            max-width: 800px;
+            transition: transform 0.2s;
+        }
+        .video-container:hover {
+            transform: scale(1.05);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .list-content {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .list-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #ffffff;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <div class="menu-item active">
+            <img src="list-icon.png" alt="List">
+            <div class="menu-label">List</div>
+        </div>
+        <div class="menu-item">
             <img src="0.png" alt="Victims">
             <div class="menu-label">Victims</div>
         </div>
         <div class="menu-item">
-            <img src="explore-icon.png" alt="Explore">
-            <div class="menu-label">Explore</div>
-        </div>
-        <div class="menu-item">
-            <img src="library-icon.png" alt="Library">
-            <div class="menu-label">Library</div>
+            <img src="waves-icon.png" alt="Waves">
+            <div class="menu-label">Waves</div>
         </div>
     </div>
     <div class="content">
         <h1>WELCOME TO ALERTJA7YH Family</h1>
+        <div class="list-content">
+            <pre>
+ASTFH2M ~ ' EYAD-ALSHAMRI '
+Mj187@hotmail.com
+Exit187@n8.gs
+         -
+DRAGON ~ ' UNK '
+NoAcc .
+        -
+SPY ~ ' YASSIN '
+NoAcc .
+       -
+S0RTL2R ~ ' M7MD-AL3SERE ' 
+NoAcc .
+      -
+ScAiBeR ~ ' NASSER-ALDOSRE '
+NoAcc .
+      -
+MS600L ' UNKK '
+NoAcc .
+      -
+Ka2rezmA ' MOHNNAD '
+NoAcc .
+     -
+RE0 ' RYAN ' 
+NoAcc .
+            </pre>
+        </div>
         <div class="video-container">
             <div class="video-title">al3m</div>
             <video controls>
                 <source src="video1.mp4" type="video/mp4">
-                متصفحك لا يدعم تشغيل الفيديو.
+                Your browser does not support the video tag.
             </video>
         </div>
         <div class="video-container">
             <div class="video-title">CriminaL.</div>
             <video controls>
                 <source src="video2.mp4" type="video/mp4">
-                متصفحك لا يدعم تشغيل الفيديو.
+                Your browser does not support the video tag.
             </video>
         </div>
         <div class="video-container">
             <div class="video-title">Randar</div>
             <video controls>
                 <source src="ByPass3BRander.mp4" type="video/mp4">
-                متصفحك لا يدعم تشغيل الفيديو.
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <div class="video-title">Waves</div>
+            <video controls>
+                <source src="Wave1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
         </div>
     </div>
