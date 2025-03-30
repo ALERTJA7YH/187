@@ -3,74 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO ALERTJA7YH Victims </title>
+    <title>WELCOME TO ALERTJA7YH Victims</title>
     <style>
         body {
             text-align: center;
-            background-color: #000000; /* لون أسود */
+            background-color: #000000;
             font-family: Arial, sans-serif;
-            color: #4F3D9B; /* لون النص أبيض لتحسين التباين */
+            color: #4F3D9B;
             position: relative;
+            display: flex;
         }
-        .video-container {
-            margin: 20px auto;
-            max-width: 800px;
+        .sidebar {
+            width: 80px;
+            height: 100vh;
+            background-color: #121212;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
-        video {
-            width: 100%;
-            height: auto;
+        .menu-item {
+            text-align: center;
+            padding: 10px;
+            width: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
-        .video-title {
-            margin: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
+        .menu-item:hover, .menu-item.active {
+            background-color: #282828;
         }
-        .download-button, .download-button-2 {
-            position: absolute;
-            padding: 10px 20px;
-            background-color: #ffffff; /* لون الزر أبيض */
-            color: #4F3D9B; /* لون النص أسود */
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
+        .menu-item img {
+            width: 30px;
+            height: 30px;
         }
-        .download-button {
-            top: 20px;
-            left: 20px;
+        .menu-label {
+            font-size: 12px;
+            margin-top: 5px;
         }
-        .download-button-2 {
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
+        .content {
+            flex-grow: 1;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>WELCOME TO ALERTJA7YH Victims</h1>
-    <div class="video-container">
-        <div class="video-title">al3m</div>
-        <video controls>
-            <source src="video1.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+    <div class="sidebar">
+        <div class="menu-item active">
+            <img src="home-icon.png" alt="Home">
+            <div class="menu-label">Home</div>
+        </div>
+        <div class="menu-item">
+            <img src="explore-icon.png" alt="Explore">
+            <div class="menu-label">Explore</div>
+        </div>
+        <div class="menu-item">
+            <img src="library-icon.png" alt="Library">
+            <div class="menu-label">Library</div>
+        </div>
     </div>
-
-    <div class="video-container">
-        <div class="video-title">CriminaL.</div>
-        <video controls>
-            <source src="video2.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+    <div class="content">
+        <h1>WELCOME TO ALERTJA7YH Victims</h1>
+        <div class="video-container">
+            <div class="video-title">al3m</div>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <div class="video-container">
+            <div class="video-title">CriminaL.</div>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <div class="video-container">
+            <div class="video-title">Randar</div>
+            <video controls>
+                <source src="ByPass3BRander.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
     </div>
-
-    <div class="video-container">
-        <div class="video-title">Randar</div>
-        <video controls>
-            <source src="ByPass3BRander.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </div>
-    
 </body>
 </html>
