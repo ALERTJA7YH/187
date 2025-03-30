@@ -47,53 +47,32 @@
             flex-grow: 1;
             padding: 20px;
         }
-        .video-container {
-            margin: 20px auto;
-            max-width: 800px;
-            transition: transform 0.2s;
+        .video-container, .list-content {
+            display: none;
         }
-        .video-container:hover {
-            transform: scale(1.05);
-        }
-        video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .list-content {
-            text-align: left;
-            margin: 20px auto;
-            max-width: 600px;
-            background-color: #1a1a1a;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .list-content pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            color: #ffffff;
-            font-size: 14px;
+        .active-section {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="menu-item active">
+        <div class="menu-item" onclick="showSection('list')">
             <img src="list-icon.png" alt="List">
             <div class="menu-label">List</div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" onclick="showSection('victims')">
             <img src="0.png" alt="Victims">
             <div class="menu-label">Victims</div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" onclick="showSection('waves')">
             <img src="waves-icon.png" alt="Waves">
             <div class="menu-label">Waves</div>
         </div>
     </div>
     <div class="content">
         <h1>WELCOME TO ALERTJA7YH Family</h1>
-        <div class="list-content">
+        <div id="list" class="list-content active-section">
             <pre>
 ASTFH2M ~ ' EYAD-ALSHAMRI '
 Mj187@hotmail.com
@@ -121,28 +100,24 @@ RE0 ' RYAN '
 NoAcc .
             </pre>
         </div>
-        <div class="video-container">
+        <div id="victims" class="video-container">
             <div class="video-title">al3m</div>
             <video controls>
                 <source src="video1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-        <div class="video-container">
             <div class="video-title">CriminaL.</div>
             <video controls>
                 <source src="video2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-        <div class="video-container">
             <div class="video-title">Randar</div>
             <video controls>
                 <source src="ByPass3BRander.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-container">
+        <div id="waves" class="video-container">
             <div class="video-title">Waves</div>
             <video controls>
                 <source src="Wave1.mp4" type="video/mp4">
@@ -150,5 +125,13 @@ NoAcc .
             </video>
         </div>
     </div>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.list-content, .video-container').forEach(el => {
+                el.classList.remove('active-section');
+            });
+            document.getElementById(sectionId).classList.add('active-section');
+        }
+    </script>
 </body>
 </html>
