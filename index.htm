@@ -23,12 +23,6 @@
             align-items: center;
             gap: 20px;
         }
-        .video-title {
-    font-size: 24px; /* تكبير حجم الخط */
-    font-weight: bold; /* جعل النص عريض */
-    margin: 10px 0; /* إضافة مسافة بين العناوين */
-    color: white; /* تغيير اللون إذا لزم الأمر */
-}
         .menu-item {
             text-align: center;
             padding: 10px;
@@ -52,12 +46,31 @@
         .content {
             flex-grow: 1;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .video-container, .list-content {
             display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
         .active-section {
             display: block;
+            opacity: 1;
+        }
+        .video-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            color: #FFD700;
+            text-transform: uppercase;
+        }
+        video {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            border: 2px solid #4F3D9B;
         }
     </style>
 </head>
@@ -134,8 +147,14 @@ RE0 ' RYAN '
         function showSection(sectionId) {
             document.querySelectorAll('.list-content, .video-container').forEach(el => {
                 el.classList.remove('active-section');
+                el.style.opacity = '0';
             });
-            document.getElementById(sectionId).classList.add('active-section');
+
+            const section = document.getElementById(sectionId);
+            section.classList.add('active-section');
+            setTimeout(() => {
+                section.style.opacity = '1';
+            }, 100);
         }
     </script>
 </body>
