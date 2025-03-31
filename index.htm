@@ -12,6 +12,7 @@
             color: #4F3D9B;
             position: relative;
             display: flex;
+            flex-direction: column;
         }
         .sidebar {
             width: 80px;
@@ -54,6 +55,9 @@
             display: none;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .active-section {
             display: block;
@@ -79,6 +83,18 @@
         .social-links img:hover {
             transform: scale(1.1);
         }
+        video {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #4F3D9B;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        video:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -97,8 +113,8 @@
         </div>
     </div>
     <div class="content">
-        <h1>WELCOME TO ALERTJA7YH Family</h1>
         <div id="home" class="home-content active-section">
+            <h1>WELCOME TO ALERTJA7YH Family</h1>
             <div class="home-title">Members of the group</div>
             <pre>
 ASTFH2M   ~   EYAD AL-SHAMRI
