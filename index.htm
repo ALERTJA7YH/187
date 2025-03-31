@@ -12,6 +12,7 @@
             color: #4F3D9B;
             position: relative;
             display: flex;
+            flex-direction: column;
         }
         .sidebar {
             width: 80px;
@@ -49,6 +50,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
         .video-container, .list-content {
             display: none;
@@ -67,23 +69,24 @@
             text-transform: uppercase;
         }
         video {
-            width: 150px;
+            width: 300px;
             height: auto;
             border-radius: 10px;
             border: 2px solid #4F3D9B;
             cursor: pointer;
             transition: transform 0.2s;
+            margin: 10px;
         }
         video:focus, video:active {
-            transform: scale(2);
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="menu-item" onclick="showSection('list')">
-            <img src="1.png" alt="List">
-            <div class="menu-label">List</div>
+        <div class="menu-item" onclick="showSection('home')">
+            <img src="1.png" alt="Home">
+            <div class="menu-label">Home</div>
         </div>
         <div class="menu-item" onclick="showSection('victims')">
             <img src="0.png" alt="Victims">
@@ -95,8 +98,9 @@
         </div>
     </div>
     <div class="content">
-        <h1>WELCOME TO ALERTJA7YH Family</h1>
-        <div id="list" class="list-content active-section">
+        <div id="home" class="list-content active-section">
+            <h1>WELCOME TO ALERTJA7YH Family</h1>
+            <h2>Members of the group</h2>
             <pre>
 ASTFH2M   ~   EYAD AL-SHAMRI
 DRAGON    ~   UNKNOWN
@@ -105,8 +109,15 @@ S0RTL2R   ~   MOHAMMED AL-ASIRI
 ScAiBeR   ~   NASSER AL-DOSARI
 MS600L    ~   UNKNOWN
 Ka2rezmA  ~   MOHANNAD
-
             </pre>
+            <div>
+                <a href="https://t.me/YourTelegramLink" target="_blank">
+                    <img src="telegram.png" alt="Telegram" width="50" height="50">
+                </a>
+                <a href="https://discord.com/YourDiscordLink" target="_blank">
+                    <img src="discord.png" alt="Discord" width="50" height="50">
+                </a>
+            </div>
         </div>
         <div id="victims" class="video-container">
             <div class="video-title">Al3m</div>
