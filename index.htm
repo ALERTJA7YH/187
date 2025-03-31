@@ -12,7 +12,6 @@
             color: #4F3D9B;
             position: relative;
             display: flex;
-            flex-direction: column;
         }
         .sidebar {
             width: 80px;
@@ -51,57 +50,40 @@
             flex-direction: column;
             align-items: center;
         }
-        .video-container, .home-content {
+        .video-container, .list-content {
             display: none;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
         }
         .active-section {
             display: block;
             opacity: 1;
         }
-        .home-title {
-            font-size: 24px;
+        .video-title {
+            font-size: 20px;
             font-weight: bold;
+            margin: 15px 0 5px;
             color: #FFD700;
-            margin-bottom: 20px;
-        }
-        pre {
-            font-size: 16px;
-            color: #FFFFFF;
-        }
-        .social-links img {
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .social-links img:hover {
-            transform: scale(1.1);
+            text-transform: uppercase;
         }
         video {
-            width: 100%;
-            max-width: 600px;
+            width: 150px;
             height: auto;
             border-radius: 10px;
             border: 2px solid #4F3D9B;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.2s;
         }
-        video:hover {
-            transform: scale(1.05);
+        video:focus, video:active {
+            transform: scale(2);
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="menu-item" onclick="showSection('home')">
-            <img src="1.png" alt="Home">
-            <div class="menu-label">Home</div>
+        <div class="menu-item" onclick="showSection('list')">
+            <img src="1.png" alt="List">
+            <div class="menu-label">List</div>
         </div>
         <div class="menu-item" onclick="showSection('victims')">
             <img src="0.png" alt="Victims">
@@ -113,9 +95,8 @@
         </div>
     </div>
     <div class="content">
-        <div id="home" class="home-content active-section">
-            <h1>WELCOME TO ALERTJA7YH Family</h1>
-            <div class="home-title">Members of the group</div>
+        <h1>WELCOME TO ALERTJA7YH Family</h1>
+        <div id="list" class="list-content active-section">
             <pre>
 ASTFH2M   ~   EYAD AL-SHAMRI
 DRAGON    ~   UNKNOWN
@@ -124,19 +105,8 @@ S0RTL2R   ~   MOHAMMED AL-ASIRI
 ScAiBeR   ~   NASSER AL-DOSARI
 MS600L    ~   UNKNOWN
 Ka2rezmA  ~   MOHANNAD
+
             </pre>
-            <audio controls autoplay>
-                <source src="telegram_sound.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <div class="social-links">
-                <a href="https://t.me/your_telegram_link" target="_blank">
-                    <img src="telegram_icon.png" alt="Telegram">
-                </a>
-                <a href="https://discord.com/invite/your_discord_link" target="_blank">
-                    <img src="discord_icon.png" alt="Discord">
-                </a>
-            </div>
         </div>
         <div id="victims" class="video-container">
             <div class="video-title">Al3m</div>
@@ -161,7 +131,7 @@ Ka2rezmA  ~   MOHANNAD
     </div>
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.home-content, .video-container').forEach(el => {
+            document.querySelectorAll('.list-content, .video-container').forEach(el => {
                 el.classList.remove('active-section');
                 el.style.opacity = '0';
             });
